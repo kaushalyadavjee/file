@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    
+	<label>Loan Amount</label><br>
+	<input type="text" name="val" id="principle" placeholder="Amount">
+	<br>
+	<label>Rate of Interest</label><br>
+	<input type="text" name="val" id="roi" placeholder="Rate of the interest">
+	<br>
+	<label>Months</label><br>
+	<input type="text" name="val" id="years" placeholder="months">
+	<br>
+<!-- itvoyagers.in -->
+	<button id="calculate_button" onclick="countCI()">click</button>
+	<br>
+	<div id="outputdiv">
+		<label>you have to deposit total Amount is : <span id="outputspan"></span></label>
+	</div>
+	<script type="text/javascript" src="compoundinterest.js"></script>
+<!-- itvoyagers.in -->
+<a href="m.html">
+  <p>If you want to approve </p>  
+</a>
+<a href="p.html">
+  <p>If you want to reject </p>  
+</a>
+<a href="panel.html">
+  <p>If you want to Modify </p>  
+</a>
+<script>
+    
+var principle = document.getElementById("principle");
+    var roi = document.getElementById("roi");
+    var years = document.getElementById("years");
+    var outputspan = document.getElementById("outputspan");
+    
+    //itvoyagers.in
+    function countCI()
+    {
+        p = parseFloat(principle.value);
+        r = parseFloat(roi.value);
+        t = parseFloat(years.value);
+        ci = p*(Math.pow((1+r/100),t));
+        outputspan.innerHTML = ci;
+    }</script>
+    
+   </body>     
+</html>

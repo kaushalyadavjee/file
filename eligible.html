@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="main-holder">
+        <h1 id="login-header">Annual Income</h1>
+        <p> Enter your annual Income on the basis of Salary per Month That you enterd in previous page</p>
+        <div id="login-error-msg-holder">
+          <!-- <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p> -->
+        </div>
+        
+        <form id="login-form">
+          <!-- <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username"> -->
+         <p>Enter Annual Income: <input type="Amount" name="Amount" id="Amount-field" class="login-form-field" placeholder="Amount">
+          <input type="submit" value="Submit" id="login-form-submit">
+        </form>
+      
+      </main>
+      <script>
+          const loginForm = document.getElementById("login-form");
+        const loginButton = document.getElementById("login-form-submit");
+
+
+loginButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    // const username = loginForm.username.value;
+    const Amount = loginForm.Amount.value;
+
+    if ( Amount >= 100000 && Amount <= 4000000 ) {
+        let Number  = Amount/10000 + 290;
+        
+        
+        //const loginForm = document.getElementById("login-form").innerHTML = +Number;
+        alert( "your civil Score is=" +Number );
+        window.location.href="panel.html";
+    }
+        // window.location.href="profile.html";
+        
+     else if(Amount>4000001) {
+        let Number= 700;
+        alert( "your civil Score is=" +Number  );
+        window.location.href="panel.html";
+    }
+})
+      </script>
+</body>
+</html>
